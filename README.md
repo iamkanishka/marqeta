@@ -27,7 +27,7 @@ Full coverage of all 120 Marqeta API surfaces with:
 ```elixir
 def deps do
   [
-    {:marqeta, "~> 0.1"}
+    {:marqeta, "~> 1.0"}
   ]
 end
 ```
