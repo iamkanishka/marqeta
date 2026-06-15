@@ -461,7 +461,18 @@ defmodule Marqeta.Test.BypassHelper do
   end
 
   @doc "Sets up a paginated list GET expectation with `items` as data."
-  @spec expect_list(term(), String.t(), list(), keyword()) :: :ok
+  @type expect_list_opts :: [
+          {:status, pos_integer()}
+          | {:is_more, boolean()}
+          | {:start_index, non_neg_integer()}
+        ]
+
+  @spec expect_list(
+          Bypass.t(),
+          binary(),
+          list(),
+          expect_list_opts()
+        ) :: term()
   def expect_list(bypass, path, items, opts \\ []) do
     status = Keyword.get(opts, :status, 200)
     is_more = Keyword.get(opts, :is_more, false)
