@@ -103,8 +103,8 @@ defmodule Marqeta.MixProject do
         "GitHub" => @source_url,
         "Marqeta Docs" => "https://www.marqeta.com/docs/core-api/introduction"
       },
-      maintainers: ["Your Name"],
-      files: ~w(lib priv .formatter.exs mix.exs README.md LICENSE CHANGELOG.md)
+      maintainers: ["Kanishka Naik"],
+      files: ~w(lib .formatter.exs mix.exs README.md LICENSE CHANGELOG.md)
     ]
   end
 
